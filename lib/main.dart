@@ -14,33 +14,40 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("I love Flutter"),
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(8),
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 5,
-                  offset: Offset(2.0, 5.0),
-                )
-              ],
-              color: Colors.yellow,
-              gradient: LinearGradient(colors: [
-                Colors.red,
-                Colors.pink,
-              ])),
-          width: 100,
-          height: 100,
-          child: Text(
-            "I am a box",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Container(
+            color: Colors.black,
+            width: 200,
+            height: 400,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: 100,
+                    height: 100,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: 100,
+                    height: 100,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: 100,
+                    height: 100,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
